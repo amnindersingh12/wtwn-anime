@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <!-- <script src="all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Anime Recommendation</h1>
+  </div>
+  <div id="imd">
+    <img src="anime.jpeg" alt="" style="  border-radius: 8px; display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 50%;">
+  </div>
+  <div class="alpha">
+    <form method="POST" action="{{url_for('home')}}">
+      <b>Anime title : <input type="text" ,name='a' ,placeholder="Naruto"> </b>
+      <input type="submit" value="Predict" class="Predict" >
+    </form>
+  </div>
+  <footer>
+    <p>© Made with ❤️ by Amninder Singh</p>
+</footer>
+</body>
+
+</html>
