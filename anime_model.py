@@ -4,8 +4,8 @@ import numpy as np
 import pickle
 
 #Gathering Data
-anime_data=pd.read_csv('./archive/anime.csv')
-rating_data=pd.read_csv('./archive/rating.csv')
+anime_data=pd.read_csv('./dataset/anime.csv')
+rating_data=pd.read_csv('./dataset/rating.csv')
 
 #merging
 anime_fulldata=pd.merge(anime_data,rating_data,on='anime_id',suffixes= ['', '_user']) # anime_id name genre type episodes rating members user_id rating_user
@@ -53,7 +53,7 @@ sig = sigmoid_kernel(tfv_matrix, tfv_matrix)
 indices = pd.Series(anime_data.index, index=anime_data['name']).drop_duplicates()
 
 #recommendation 
-def model(title, sig=sig):
+def predict(title, sig=sig):
     # Get the index corresponding to original_title
     idx = indices[title]
 
@@ -74,11 +74,12 @@ def model(title, sig=sig):
                                  'Rating': anime_data['rating'].iloc[anime_indices].values})
 
 #dump model
-file = "myanimemodel.pkl"
-fileobj = open(file,'wb')
-pickle.dump(model,fileobj)
-fileobj.close()
+# file = "myanimemodel.pkl"
+# fileobj = open(file,'wb')
+# pickle.dump(predict,fileobj)
+# fileobj.close()
 
-file = "mymodel.pkl"
-fileobj = open(file,'rb')
-mp = pickle.load(fileobj)
+# file = "myanimemodel.pkl"
+# fileobj = open(file,'rb')
+# mp = pickle.load(fileobj)
+# print(mp("Naruto"))
