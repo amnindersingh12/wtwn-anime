@@ -78,3 +78,7 @@ file = "myanimemodel.pkl"
 fileobj = open(file,'wb')
 pickle.dump(model,fileobj)
 fileobj.close()
+
+file = "mymodel.pkl"
+fileobj = open(file,'rb')
+mp = pickle.load(fileobj)

@@ -6,7 +6,7 @@
 
   <!-- <script src="all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script> -->
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./static/style.css">
 
   <meta charset="utf-8">
 
@@ -17,7 +17,7 @@
     <h1>Anime Recommendation</h1>
   </div>
   <div id="imd">
-    <img src="anime.jpeg" alt="" style="  border-radius: 8px; display: block;
+    <img src="/static/anime.jpeg" alt="" style="  border-radius: 8px; display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -27,7 +27,7 @@
   <div class="alpha">
     <form method="POST" action="{{url_for('home')}}">
       <b>Anime title : <input type="text" ,name='a' ,placeholder="Naruto"> </b>
-      <input type="submit" value="Predict" class="Predict" >
+      <input type="submit" value="Predict" class="model" >
     </form>
   </div>
   <footer>
