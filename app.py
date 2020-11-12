@@ -24,10 +24,7 @@ def predict_on():
     
     return render_template('after.html',  tables=[fg.to_html(classes='data', header="true")])
 
-@app.errorhandler(500)
-def internal_error(e):
-    print(e)
-    return render_template("template/500.html")
+
 
 
 if __name__ == "__main__":
